@@ -21,9 +21,6 @@
   <!-- top-brands -->
     <%= render partial: "top-brands" %>
   <!-- //top-brands -->
-  <!-- fresh-vegetables -->
-    <%= render partial: "fresh-vegetables" %>
-  <!-- //fresh-vegetables -->
   <!-- footer -->
     <%= render partial: "footer" %>
   <!-- //footer -->
@@ -62,7 +59,7 @@ $(document).ready(function(){
 	</script>
 <!-- //here ends scrolling icon -->
 <script src="minicart.js"></script>
-<script>
+  <script>
 		paypal.minicart.render();
 
 		paypal.minicart.cart.on('checkout', function (evt) {
