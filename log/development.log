@@ -12862,3 +12862,163 @@ Started GET "/images/11.jpg" for ::1 at 2021-04-20 15:31:44 -0500
   
 ActionController::RoutingError (No route matches [GET] "/images/11.jpg"):
   
+Started GET "/" for ::1 at 2021-04-20 16:39:56 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 361)
+  Rendered layout layouts/application.html.erb (Duration: 452.3ms | Allocations: 61732)
+Completed 500 Internal Server Error in 471ms (ActiveRecord: 0.0ms | Allocations: 66179)
+
+
+  
+ActionView::Template::Error (Error: Incompatible units: 'rem' and 'px'.
+        on line 725:37 of node_modules/bootstrap/scss/_variables.scss
+        from line 9:9 of node_modules/bootstrap/scss/bootstrap.scss
+        from line 3:9 of app/assets/stylesheets/application.css.scss
+>> $nav-link-height:                   $font-size-base * $line-height-base + $n
+   ------------------------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= stylesheet_link_tag 'flexslider', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_pack_tag 'jquery', 'data-turbolinks-track': 'reload' %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2021-04-20 16:43:10 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 361)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/miguelfdz/Desktop/fernandez-market/public/packs
+[Webpacker] Hash: 583aba12d50006b26fec
+Version: webpack 4.46.0
+Time: 3451ms
+Built at: 04/20/2021 4:43:17 PM
+                                            Asset      Size              Chunks                         Chunk Names
+           js/application-0ad75bdef8a918e74d6f.js   704 KiB         application  [emitted] [immutable]  application
+       js/application-0ad75bdef8a918e74d6f.js.map   827 KiB         application  [emitted] [dev]        application
+             js/counterup-917d340f5d35e50706e9.js   316 KiB           counterup  [emitted] [immutable]  counterup
+         js/counterup-917d340f5d35e50706e9.js.map   373 KiB           counterup  [emitted] [dev]        counterup
+              js/creditly-a6733614577b690b911d.js   329 KiB            creditly  [emitted] [immutable]  creditly
+          js/creditly-a6733614577b690b911d.js.map   388 KiB            creditly  [emitted] [dev]        creditly
+                js/easing-6bcaf215b7f24c785a89.js   320 KiB              easing  [emitted] [immutable]  easing
+            js/easing-6bcaf215b7f24c785a89.js.map   377 KiB              easing  [emitted] [dev]        easing
+    js/easyResponsiveTabs-ca3ff17b017df803770b.js   324 KiB  easyResponsiveTabs  [emitted] [immutable]  easyResponsiveTabs
+js/easyResponsiveTabs-ca3ff17b017df803770b.js.map   385 KiB  easyResponsiveTabs  [emitted] [dev]        easyResponsiveTabs
+              js/jquery-1-0e19594ea7b0ad6f2539.js   145 KiB            jquery-1  [emitted] [immutable]  jquery-1
+          js/jquery-1-0e19594ea7b0ad6f2539.js.map   120 KiB            jquery-1  [emitted] [dev]        jquery-1
+                js/jquery-f88aee2732fe71cd2e1f.js   324 KiB              jquery  [emitted] [immutable]  jquery
+            js/jquery-f88aee2732fe71cd2e1f.js.map   385 KiB              jquery  [emitted] [dev]        jquery
+              js/minicart-42094ecc7af4bf252c41.js  92.8 KiB            minicart  [emitted] [immutable]  minicart
+          js/minicart-42094ecc7af4bf252c41.js.map   103 KiB            minicart  [emitted] [dev]        minicart
+              js/move-top-3b04fe4378f1831873ee.js   316 KiB            move-top  [emitted] [immutable]  move-top
+          js/move-top-3b04fe4378f1831873ee.js.map   373 KiB            move-top  [emitted] [dev]        move-top
+                js/okzoom-d6cc7133b318eadc18a6.js   324 KiB              okzoom  [emitted] [immutable]  okzoom
+            js/okzoom-d6cc7133b318eadc18a6.js.map   382 KiB              okzoom  [emitted] [dev]        okzoom
+             js/waypoints-fa73b39542303d928a06.js   328 KiB           waypoints  [emitted] [immutable]  waypoints
+         js/waypoints-fa73b39542303d928a06.js.map   382 KiB           waypoints  [emitted] [dev]        waypoints
+                                    manifest.json   3.5 KiB                      [emitted]              
+Entrypoint application = js/application-0ad75bdef8a918e74d6f.js js/application-0ad75bdef8a918e74d6f.js.map
+Entrypoint counterup = js/counterup-917d340f5d35e50706e9.js js/counterup-917d340f5d35e50706e9.js.map
+Entrypoint creditly = js/creditly-a6733614577b690b911d.js js/creditly-a6733614577b690b911d.js.map
+Entrypoint easing = js/easing-6bcaf215b7f24c785a89.js js/easing-6bcaf215b7f24c785a89.js.map
+Entrypoint easyResponsiveTabs = js/easyResponsiveTabs-ca3ff17b017df803770b.js js/easyResponsiveTabs-ca3ff17b017df803770b.js.map
+Entrypoint jquery-1 = js/jquery-1-0e19594ea7b0ad6f2539.js js/jquery-1-0e19594ea7b0ad6f2539.js.map
+Entrypoint jquery = js/jquery-f88aee2732fe71cd2e1f.js js/jquery-f88aee2732fe71cd2e1f.js.map
+Entrypoint minicart = js/minicart-42094ecc7af4bf252c41.js js/minicart-42094ecc7af4bf252c41.js.map
+Entrypoint move-top = js/move-top-3b04fe4378f1831873ee.js js/move-top-3b04fe4378f1831873ee.js.map
+Entrypoint okzoom = js/okzoom-d6cc7133b318eadc18a6.js js/okzoom-d6cc7133b318eadc18a6.js.map
+Entrypoint waypoints = js/waypoints-fa73b39542303d928a06.js js/waypoints-fa73b39542303d928a06.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 885 bytes {application} [built]
+[./app/javascript/packs/counterup.min.js] 1.55 KiB {counterup} [built]
+[./app/javascript/packs/creditly.js] 14.2 KiB {creditly} [built]
+[./app/javascript/packs/easing.js] 5.75 KiB {easing} [built]
+[./app/javascript/packs/easyResponsiveTabs.js] 9.4 KiB {easyResponsiveTabs} [built]
+[./app/javascript/packs/jquery-1.11.1.min.js] 141 KiB {jquery-1} [built]
+[./app/javascript/packs/jquery.wmuSlider.js] 9.39 KiB {jquery} [built]
+[./app/javascript/packs/minicart.js] 88.9 KiB {minicart} [built]
+[./app/javascript/packs/move-top.js] 1.67 KiB {move-top} [built]
+[./app/javascript/packs/okzoom.js] 8.95 KiB {okzoom} [built]
+[./app/javascript/packs/waypoints.min.js] 13.5 KiB {waypoints} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {counterup} {creditly} {easing} {easyResponsiveTabs} {jquery} {move-top} {okzoom} {waypoints} [built]
+    + 9 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered pages/_header.html.erb (Duration: 1.3ms | Allocations: 193)
+  Rendered pages/_banner.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered pages/_top-brands.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered pages/_footer.html.erb (Duration: 6.7ms | Allocations: 710)
+  Rendered layout layouts/application.html.erb (Duration: 6769.1ms | Allocations: 306772)
+Completed 200 OK in 6788ms (Views: 6774.4ms | ActiveRecord: 0.0ms | Allocations: 311250)
+
+
+Started GET "/bootstrap.min.js" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.js"):
+  
+Started GET "/minicart.js" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/minicart.js"):
+  
+Started GET "/images/5.jpg" for ::1 at 2021-04-20 16:43:17 -0500
+Started GET "/images/4.jpg" for ::1 at 2021-04-20 16:43:17 -0500
+Started GET "/fernandez_market" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fernandez_market"):
+  
+Started GET "/images/cart.png" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cart.png"):
+  
+Started GET "/images/6.jpg" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/6.jpg"):
+  
+Started GET "/minicart.js" for ::1 at 2021-04-20 16:43:17 -0500
+Started GET "/images/tag.png" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/minicart.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tag.png"):
+  
+Started GET "/images/1.png" for ::1 at 2021-04-20 16:43:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/1.png"):
+  
+Started GET "/images/3.png" for ::1 at 2021-04-20 16:43:18 -0500
+Started GET "/images/offer.png" for ::1 at 2021-04-20 16:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/offer.png"):
+  
+Started GET "/images/2.png" for ::1 at 2021-04-20 16:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/2.png"):
+  
+Started GET "/images/4.png" for ::1 at 2021-04-20 16:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/4.png"):
+  
+Started GET "/images/img-sp.png" for ::1 at 2021-04-20 16:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/img-sp.png"):
+  
