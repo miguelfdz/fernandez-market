@@ -1,0 +1,80 @@
+<div class="agileits_header">
+  <div class="w3l_search">
+    <form action="#" method="post">
+      <input type="text" name="Product" value="Buscar un producto" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar un producto';}" required="">
+      <input type="submit" value=" ">
+    </form>
+  </div>
+  <div class="product_list_header">
+    <form action="#" method="post" class="last">
+      <fieldset>
+          <input type="hidden" name="cmd" value="_cart" />
+          <input type="hidden" name="display" value="1" />
+          <input type="submit" name="submit" value="Mi carrito" class="button" />
+      </fieldset>
+    </form>
+  </div>
+  <div class="w3l_header_right">
+    <ul>
+      <li class="dropdown profile_details_drop">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+        <div class="mega-dropdown-menu">
+          <div class="w3ls_vegetables">
+            <ul class="dropdown-menu drp-mnu">
+              <li><a href="login.html">Iniciar sesión</a></li> 
+              <li><a href="login.html">Registrse</a></li>
+            </ul>
+          </div>                  
+        </div>	
+      </li>
+    </ul>
+  </div>
+  <div class="w3l_header_right1">
+    <h2><a href="mail.html">Contactanos</a></h2>
+  </div>
+  <div class="clearfix"> </div>
+</div>
+<!-- script-for sticky-nav -->
+<script>
+$(document).ready(function() {
+  var navoffeset=$(".agileits_header").offset().top;
+  $(window).scroll(function(){
+    var scrollpos=$(window).scrollTop(); 
+    if(scrollpos >=navoffeset){
+      $(".agileits_header").addClass("fixed");
+    }else{
+      $(".agileits_header").removeClass("fixed");
+    }
+  });
+  
+});
+</script>
+<!-- //script-for sticky-nav -->
+<div class="logo_products">
+  <div class="container">
+    <div class="w3ls_logo_products_left px-2 py-2">
+      <a href="index.html">
+        <img src="fernandez_market" width="90" height="110" class="img-responsive" />
+      </a>
+    </div>
+    <div class="w3ls_logo_products_left1">
+      <ul class="special_items">
+        <li><a href="about.html">Acerca de nosotros</a><i>/</i></li>
+        <li><a href="products.html">Las mejores ofertas</a><i>/</i></li>
+        <li><a href="services.html">Servicios</a></li>
+      </ul>
+    </div>
+    <div class="w3ls_logo_products_left1">
+      <ul class="phone_email">
+        <li><i class="fa fa-phone" aria-hidden="true"></i>(+52) 81 1292 9308</li>
+      </ul>
+    </div>
+    <div class="w3ls_logo_products_left1">
+      <ul class="phone_email">
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">soporte@fernandezmarket.com</a></li>
+      </ul>
+    </div>
+  </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
