@@ -150,11 +150,12 @@ ul.dropdown-menu.drp-mnu li a i {
     padding-left: 1em;
 }
 .logo_products{
-	padding:4em 0 1em;
+	padding:1em 0 1em;
 }
 .w3ls_logo_products_left{
 	float:left;
 	margin-right: 7em;
+  padding-top: 1em;
 }
 .w3ls_logo_products_left h1 a{
 	font-size: 1.5em;
@@ -2819,6 +2820,35 @@ input.checkbox:checked:after {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
+}
+
+.icon-addon {
+  position: relative;
+  color: #555;
+  display: block;
+}
+
+.icon-addon:after {
+  clear: both;
+}
+
+.icon-addon .fa {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  font-size: 14px;
+  width: 20px;
+  margin-left: -2.5px;
+  text-align: center;
+  padding: 10px 0;
+  top: 1px
+}
+
+.icon-addon.addon-lg .form-control {
+  line-height: 1.33;
+  height: 46px;
+  font-size: 16px;
+  padding: 10px 16px 10px 40px;
 }
 /*-- //login --*/
 /*-----start-responsive-design------*/
