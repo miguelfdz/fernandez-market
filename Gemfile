@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications.
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap', '~> 4.6'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'font_awesome5_rails'
 gem 'jquery-rails'
