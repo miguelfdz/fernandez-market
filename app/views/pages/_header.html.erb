@@ -1,4 +1,11 @@
 <div class="agileits_header">
+  <% if current_user.present? %>
+    <div class="w3l_offers">
+      <p>
+        <%= current_user.email %>
+      </p>
+    </div>
+  <% end %>
   <div class="w3l_header_right">
     <ul>
       <li class="dropdown profile_details_drop">
@@ -8,6 +15,14 @@
             <ul class="dropdown-menu drp-mnu">
               <li><a href="/users/sign_in">Iniciar sesión</a></li> 
               <li><a href="/users/sign_up">Registrarse</a></li>
+              <% if current_user.present? %>
+                <li class='divider'></li>
+                <li>
+                  <a href="/users/sign_up">
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                  </a>
+                </li>
+              <% end %>
             </ul>
           </div>                  
         </div>	

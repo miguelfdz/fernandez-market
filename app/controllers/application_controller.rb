@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
+  def user
+    @current_user = current_user
+  end
 
   protected
 
