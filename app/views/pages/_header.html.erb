@@ -1,8 +1,8 @@
 <div class="agileits_header">
   <% if current_user.present? %>
     <div class="w3l_offers">
-      <p>
-        <%= current_user.email %>
+      <p class="mt-4" style="padding-top: 10px; color: white; padding-left: 20px;">
+        Bienvenido, <%= current_user.email %>!
       </p>
     </div>
   <% end %>
