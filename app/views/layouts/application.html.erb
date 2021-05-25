@@ -1,65 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FdzMkt</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'flexslider', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'jquery', 'data-turbolinks-track': 'reload' %>
+    </style>
   </head>
 
   <body>
-    <%= render partial: "pages/flashes" %>
-    <%= render partial: "pages/header" %>
-    <%= render partial: "pages/banner" %>
-    <%= render partial: "pages/top-brands" %>
-    <%= render partial: "pages/footer" %>
+    <%= yield %>
   </body>
-  <!-- Bootstrap Core JavaScript -->
-  <script src="bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $(".dropdown").hover(
-        function() {
-          $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-          $(this).toggleClass('open');
-        },
-        function() {
-          $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-          $(this).toggleClass('open');
-        }
-      );
-    });
-  </script>
-  <!-- here stars scrolling icon -->
-  <script type="text/javascript">
-    $(document).ready(function() {	
-      $().UItoTop({ easingType: 'easeOutQuart' });				
-    });
-  </script>
-  <!-- //here ends scrolling icon -->
-  <script src="minicart.js"></script>
-  <script>
-    paypal.minicart.render();
-
-    paypal.minicart.cart.on('checkout', function (evt) {
-      var items = this.items(),
-        len = items.length,
-        total = 0,
-        i;
-
-      // Count the number of each item in the cart
-      for (i = 0; i < len; i++) {
-        total += items[i].get('quantity');
-      }
-
-      if (total < 3) {
-        alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-        evt.preventDefault();
-      }
-    });
-  </script>
 </html>
