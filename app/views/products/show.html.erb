@@ -26,8 +26,10 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @product.image %>
+  <div style="width: 400px; height:auto;">
+    <strong>Image:</strong>
+    <%= image_tag(@product.image, style:'width:100%') %>
+  <div>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
