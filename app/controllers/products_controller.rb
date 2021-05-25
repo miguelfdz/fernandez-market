@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+  require_relative "../services/products/categories_service"
+
   before_action :set_product, only: %i[ show edit update destroy ]
+  helper_method :products_categories
 
   # GET /products or /products.json
   def index
@@ -54,6 +57,10 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: "Product was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def products_categories
+    Products::CategoriesService.get_options
   end
 
   private

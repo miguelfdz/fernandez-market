@@ -37,6 +37,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :category %>
+    <%= form.select :category, grouped_options_for_select(products_categories) %>
+  </div>
+
+  <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
