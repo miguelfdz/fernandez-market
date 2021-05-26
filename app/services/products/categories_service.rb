@@ -1,7 +1,7 @@
 module Products
   module CategoriesService
     GROUPED_OPTIONS = [
-      ['Selecciona una categoria', ['Abarrotes', 'Bebés y maternidad', 'Bebidas alcoholicas', 'Cuidado personal y belleza', 'Desechables', 'Dulceria', 'Farmacia', 'Hogar', 'Mascotas', 'Papeleria']],
+      ['Selecciona una categoria', ['Abarrotes', 'Bebés y maternidad', 'Bebidas alcoholicas', 'Cuidado personal y belleza', 'Desechables', 'Dulceria', 'Farmacia', 'Hogar', 'Mascotas', 'Papeleria', 'Veladoras']],
       ['Bebidas',["Refrescos", "Jugos", "Electrolitos"]], 
       ['Frios', ["Comida congelada", "Salchichoneria"]]
     ]
