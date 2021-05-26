@@ -8,3 +8,6 @@
 yarn-debug.log*
 .yarn-integrity
 /storage
+.vscode
+.bundle
+vendor/bundle/
