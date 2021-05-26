@@ -14,7 +14,7 @@
                         <%= image_tag(product.image, style:'width:100%') %>
                       <div>
                       <p><%= "#{product.name}" %></p>
-                      <h4><%= "#{(product.price - (product.price.to_f / 100 * product.price)).round(2)}" %> <span><%= "#{product.price}" %></span></h4>
+                      <h4><%= "#{Product.price_with_discount(product)}" %> <span><%= "#{product.price}" %></span></h4>
                     </div>
                     <div class="snipcart-details top_brand_home_details">
                       <form action="checkout.html" method="post">
