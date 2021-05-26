@@ -2,145 +2,43 @@
   <div class="container">
     <h3>Super Ofertas</h3>
     <div class="agile_top_brands_grids">
-      <div class="col-md-3 top_brand_left">
-        <div class="hover14 column">
-          <div class="agile_top_brand_left_grid">
-            <div class="tag"><img src="images/tag.png" alt=" " class="img-responsive" /></div>
-            <div class="agile_top_brand_left_grid1">
-              <figure>
-                <div class="snipcart-item block" >
-                  <div class="snipcart-thumb">
-                    <a href="single.html"><img title=" " alt=" " src="images/1.png" /></a>		
-                    <p>Acondicionador Pantene</p>
-                    <h4>$7.99 <span>$14.00</span></h4>
+      <% products_with_discount.map do |product| %>
+        <div class="col-md-3 top_brand_left">
+          <div class="hover14 column">
+            <div class="agile_top_brand_left_grid">
+              <div class="agile_top_brand_left_grid1">
+                <figure>
+                  <div class="snipcart-item block" >
+                    <div class="snipcart-thumb">
+                      <div style="width: auto; height:auto;">
+                        <%= image_tag(product.image, style:'width:100%') %>
+                      <div>
+                      <p><%= "#{product.name}" %></p>
+                      <h4><%= "#{(product.price - (product.price.to_f / 100 * product.price)).round(2)}" %> <span><%= "#{product.price}" %></span></h4>
+                    </div>
+                    <div class="snipcart-details top_brand_home_details">
+                      <form action="checkout.html" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_cart" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
+                          <input type="hidden" name="amount" value="7.99" />
+                          <input type="hidden" name="discount_amount" value="1.00" />
+                          <input type="hidden" name="currency_code" value="USD" />
+                          <input type="hidden" name="return" value=" " />
+                          <input type="hidden" name="cancel_return" value=" " />
+                          <input type="submit" name="submit" value="Agregar al carrito" class="button" />
+                        </fieldset>
+                      </form>
+                    </div>
                   </div>
-                  <div class="snipcart-details top_brand_home_details">
-                    <form action="checkout.html" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-                        <input type="hidden" name="amount" value="7.99" />
-                        <input type="hidden" name="discount_amount" value="1.00" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                        <input type="submit" name="submit" value="Agregar al carrito" class="button" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </figure>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 top_brand_left">
-        <div class="hover14 column">
-          <div class="agile_top_brand_left_grid">
-            <div class="agile_top_brand_left_grid1">
-              <figure>
-                <div class="snipcart-item block" >
-                  <div class="snipcart-thumb">
-                    <a href="single.html"><img title=" " alt=" " src="images/3.png" /></a>		
-                    <p>Arroz Knorr (240 g)</p>
-                    <h4>$11.99 <span>$17.00</span></h4>
-                  </div>
-                  <div class="snipcart-details top_brand_home_details">
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="basmati rise" />
-                        <input type="hidden" name="amount" value="11.99" />
-                        <input type="hidden" name="discount_amount" value="1.00" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                        <input type="submit" name="submit" value="Agregar al carrito" class="button" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 top_brand_left">
-        <div class="hover14 column">
-          <div class="agile_top_brand_left_grid">
-            <div class="agile_top_brand_left_grid_pos">
-              <img src="images/offer.png" alt=" " class="img-responsive" />
-            </div>
-            <div class="agile_top_brand_left_grid1">
-              <figure>
-                <div class="snipcart-item block">
-                  <div class="snipcart-thumb">
-                    <a href="single.html"><img src="images/2.png" alt=" " class="img-responsive" /></a>
-                    <p>Pepsi (2 Ltr)</p>
-                    <h4>$14.00 <span>$22.00</span></h4>
-                  </div>
-                  <div class="snipcart-details top_brand_home_details">
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="Pepsi soft drink" />
-                        <input type="hidden" name="amount" value="8.00" />
-                        <input type="hidden" name="discount_amount" value="1.00" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                        <input type="submit" name="submit" value="Agregar al carrito" class="button" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 top_brand_left">
-        <div class="hover14 column">
-          <div class="agile_top_brand_left_grid">
-            <div class="agile_top_brand_left_grid_pos">
-              <img src="images/offer.png" alt=" " class="img-responsive" />
-            </div>
-            <div class="agile_top_brand_left_grid1">
-              <figure>
-                <div class="snipcart-item block">
-                  <div class="snipcart-thumb">
-                    <a href="single.html"><img src="images/4.png" alt=" " class="img-responsive" /></a>
-                    <p>Dogchow (4 Kg)</p>
-                    <h4>$59.00 <span>$110.00</span></h4>
-                  </div>
-                  <div class="snipcart-details top_brand_home_details">
-                    <form action="#" method="post">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="add" value="1" />
-                        <input type="hidden" name="business" value=" " />
-                        <input type="hidden" name="item_name" value="dogs food" />
-                        <input type="hidden" name="amount" value="9.00" />
-                        <input type="hidden" name="discount_amount" value="1.00" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="return" value=" " />
-                        <input type="hidden" name="cancel_return" value=" " />
-                        <input type="submit" name="submit" value="Agregar al carrito" class="button" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% end %>
       <div class="clearfix"> </div>
     </div>
   </div>

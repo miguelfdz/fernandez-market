@@ -59,10 +59,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def products_categories
-    Products::CategoriesService.get_options
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -72,5 +68,9 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:name, :stock, :price, :serial_number, :brand, :category, :discount, :image)
+    end
+
+    def products_categories
+      Products::CategoriesService.get_options
     end
 end

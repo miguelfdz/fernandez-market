@@ -15,7 +15,7 @@
     <%= render partial: "pages/flashes" %>
     <%= render partial: "pages/header" %>
     <%= render partial: "pages/banner" %>
-    <%= render partial: "pages/top-brands" %>
+    <%= render partial: "pages/top-brands", :locals => { products_with_discount: products_with_discount } %>
     <%= render partial: "pages/footer" %>
   </body>
 
