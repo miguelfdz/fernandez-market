@@ -1,30 +1,26 @@
 class CartsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def index
-    @carts = Cart.all
-  end
-
   def show
-    @cart = find_for_user
-  end
-
-  def edit
-  end
-
-  def update
-    respond_to do |format|
-      if @cart.update(cart_params)
-        format.html { redirect_to @cart, notice: "Cart was successfully updated." }
-        format.json { render :show, status: :ok, location: @cart }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @cart.errors, status: :unprocessable_entity }
-      end
+    if params[:product]
+      update
+    else
+      @cart = find_for_user
     end
   end
 
+  def update
+    product = find_product
+    @cart = find_for_user
+    @cart.products.append(product)
+    @cart.total_balance += discount_price(product)
+    @cart.save
+  end
+
   private
+    def find_product
+      Product.find(params[:product])
+    end
 
     def find_for_user
       user_id = params[:user]
@@ -38,8 +34,7 @@ class CartsController < ApplicationController
       end
     end
 
-    # Only allow a list of trusted parameters through.
-    def cart_params
-      params.require(:cart).permit(:user_id, :total_balance)
+    def discount_price(product)
+      Product.price_with_discount(product)
     end
 end
