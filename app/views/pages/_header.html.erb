@@ -40,32 +40,17 @@
     <h2><a href="mail.html">Contactanos</a></h2>
   </div>
   <div class="product_list_header">
-    <form action="#" method="post" class="last">
-      <fieldset>
-          <input type="hidden" name="cmd" value="_cart" />
-          <input type="hidden" name="display" value="1" />
+    <% if current_user.present? %>
+      <form action="cart/show" method="post" class="last">
+        <fieldset>
+          <%= hidden_field_tag :user, current_user.id %>
           <input type="submit" name="submit" value="Mi carrito" class="button" />
-      </fieldset>
-    </form>
+        </fieldset>
+      </form>
+    <% end %>
   </div>
   <div class="clearfix"> </div>
 </div>
-<!-- script-for sticky-nav -->
-<script>
-$(document).ready(function() {
-  var navoffeset=$(".agileits_header").offset().top;
-  $(window).scroll(function(){
-    var scrollpos=$(window).scrollTop(); 
-    if(scrollpos >=navoffeset){
-      $(".agileits_header").addClass("fixed");
-    }else{
-      $(".agileits_header").removeClass("fixed");
-    }
-  });
-  
-});
-</script>
-<!-- //script-for sticky-nav -->
 <div class="logo_products">
   <div class="container">
     <div class="w3ls_logo_products_left px-2 py-2">

@@ -1,0 +1,20 @@
+<% products = @cart.products.to_a %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total a pagar:  $</strong>
+  <%= @cart.total_balance %>
+</p>
+
+<strong>Productos:</strong>
+<% products.map do |product| %>
+<p> Nombre:
+  <%= product.name %>
+</p>
+<p> Precio unitario (descuento aplicado):
+  <%= Product.price_with_discount(product) %>
+</p>
+<br>
+<% end %>
+
+<%= link_to 'Back', root_path %>

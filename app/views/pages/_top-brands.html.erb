@@ -17,17 +17,12 @@
                       <h4><%= "#{Product.price_with_discount(product)}" %> <span><%= "#{product.price}" %></span></h4>
                     </div>
                     <div class="snipcart-details top_brand_home_details">
-                      <form action="checkout.html" method="post">
+                      <form action="cart/update" method="post">
                         <fieldset>
-                          <input type="hidden" name="cmd" value="_cart" />
-                          <input type="hidden" name="add" value="1" />
-                          <input type="hidden" name="business" value=" " />
-                          <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-                          <input type="hidden" name="amount" value="7.99" />
-                          <input type="hidden" name="discount_amount" value="1.00" />
-                          <input type="hidden" name="currency_code" value="USD" />
-                          <input type="hidden" name="return" value=" " />
-                          <input type="hidden" name="cancel_return" value=" " />
+                          <%= hidden_field_tag :product, product.id %>
+                          <% if current_user %>
+                            <%= hidden_field_tag :user, current_user.id %>
+                          <% end %>
                           <input type="submit" name="submit" value="Agregar al carrito" class="button" />
                         </fieldset>
                       </form>
